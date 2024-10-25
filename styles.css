@@ -1,0 +1,297 @@
+/* Tema Escuro */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e; /* Fundo escuro */
+    color: #e0e0e0; /* Texto claro */
+}
+
+/* Cabeçalho com gradiente para tema escuro */
+header {
+    background: linear-gradient(90deg, #333, #000); /* Gradiente mais escuro */
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: #e0e0e0;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Caixa de busca para tema escuro */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#search-input {
+    width: 250px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #007bff;
+    border-radius: 20px;
+    background-color: #333;
+    color: #e0e0e0;
+    transition: box-shadow 0.3s ease;
+}
+
+#search-input:focus {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+}
+
+#search-button {
+    background: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+#search-button:hover {
+    background: #555;
+}
+
+/* Estilo dos produtos em tema escuro */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    background-color: #1e1e1e;
+}
+
+.product {
+    background-color: #333; /* Fundo mais escuro */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    color: #e0e0e0; /* Texto claro */
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #00ccff; /* Cor mais viva para títulos */
+}
+
+.product p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+button {
+    background: linear-gradient(90deg, #007bff, #6610f2);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #6610f2, #007bff);
+}
+
+/* Modal do Carrinho para tema escuro */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #222; /* Fundo mais escuro */
+    color: #e0e0e0;
+    margin: 15% auto;
+    padding: 40px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Footer para tema escuro */
+footer {
+    background: #111;
+    color: #bbb;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+/* Estilo do Meu Perfil com menu suspenso */
+.profile-menu {
+    position: relative;
+    display: inline-block;
+}
+
+#profile-button {
+    background-color: #6610f2;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#profile-button:hover {
+    background-color: #007bff;
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.profile-dropdown a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+}
+
+.profile-dropdown a:hover {
+    background-color: #f4f4f9;
+}
+
+.profile-menu:hover .profile-dropdown {
+    display: block;
+}
+
+/* Submenu para Meus Pedidos */
+.pedido-dropdown {
+    display: none;
+    position: relative;
+    background-color: #fff;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#pedido-lista div {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#pedido-lista ul {
+    list-style: none;
+    padding: 0;
+}
+
+#pedido-lista li {
+    margin: 5px 0;
+}
+
+#meus-pedidos:hover + .pedido-dropdown,
+#pedido-lista.show {
+    display: block;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search-container {
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    #search-input {
+        width: 100%; /* Caixa de busca mais larga em telas menores */
+    }
+
+    .product-list {
+        grid-template-columns: 1fr; /* Um produto por linha em dispositivos móveis */
+    }
+
+    .modal-content {
+        width: 95%; /* Modal mais ajustado para telas pequenas */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .product-list {
+        grid-template-columns: repeat(2, 1fr); /* Dois produtos por linha em tablets */
+    }
+}
